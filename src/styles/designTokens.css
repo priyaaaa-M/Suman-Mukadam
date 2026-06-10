@@ -1,0 +1,51 @@
+/* src/styles/designTokens.css */
+:root {
+  /* Brand palette */
+  --color-ivory: #F8F3EE;
+  --color-beige: #EFE5DC;
+  --color-gold: #C9A27E;
+  --color-mocha: #5C4335;
+  --color-dark: #2D1F1A;
+  --color-rose: #D9B8A7;
+
+  /* Typography */
+  --font-primary: 'Playfair Display', serif;
+  --font-secondary: 'DM Sans', sans-serif;
+  --font-accent: 'Cormorant Garamond', serif;
+
+  /* Transitions */
+  --transition-fast: 0.25s ease-out;
+  --transition-medium: 0.4s ease-out;
+  --transition-slow: 0.6s ease-out;
+}
+
+/* Utility classes */
+.text-gold { color: var(--color-gold); }
+.bg-gold { background-color: var(--color-gold); }
+.text-mocha { color: var(--color-mocha); }
+.bg-mocha { background-color: var(--color-mocha); }
+.text-dark { color: var(--color-dark); }
+.bg-dark { background-color: var(--color-dark); }
+.text-ivory { color: var(--color-ivory); }
+.bg-ivory { background-color: var(--color-ivory); }
+.text-beige { color: var(--color-beige); }
+.bg-beige { background-color: var(--color-beige); }
+
+/* Global smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Global scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-ivory); }
+::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 3px; }
+
+/* Floating decorative elements (placeholder) */
+.floating-decor {
+  position: absolute;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}

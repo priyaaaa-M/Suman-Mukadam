@@ -1,0 +1,90 @@
+/* src/components/Navbar.module.css */
+
+/* ------------------------------------------------------------------
+   Fixed top navbar – ivory background, no blur, no transparency
+   ------------------------------------------------------------------ */
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 84px;
+  background: rgba(248, 243, 238, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-family: var(--font-inter);
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.logoMs {
+  font-family: var(--font-greatvibes);
+  font-size: 2.2rem;
+  color: #2d1f1a;
+  line-height: 0.8;
+  margin-bottom: 2px;
+}
+.logoBrand {
+  font-family: var(--font-inter);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #2d1f1a;
+}
+.logoName {
+  font-family: var(--font-playfair);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #d7b79a;                     /* gold/beige */
+  margin-top: 2px;
+}
+
+/* Nav list – centered */
+.navList {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navItem { position: relative; }
+.link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2d1f1a;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+/* Gold underline for active item */
+.activeUnderline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #d7b79a;               /* warm gold */
+}
+
+/* Book Now button – right */
+.bookNow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #2d1f1a;
+  color: #f8f3ee;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.bookNow:hover { background: #5c4335; }
+.bookIcon { stroke: #f8f3ee; }

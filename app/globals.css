@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../src/styles/designTokens.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Dancing+Script:wght@600;700&family=Sacramento&display=swap');
+
+@layer base {
+  :root {
+    --background: 30 33% 96%;
+    --foreground: 15 27% 14%;
+    --card: 30 25% 97%;
+    --card-foreground: 15 27% 14%;
+    --popover: 30 25% 97%;
+    --popover-foreground: 15 27% 14%;
+    --primary: 25 22% 31%;
+    --primary-foreground: 30 33% 96%;
+    --secondary: 25 30% 88%;
+    --secondary-foreground: 15 27% 14%;
+    --muted: 25 20% 90%;
+    --muted-foreground: 25 15% 45%;
+    --accent: 28 40% 64%;
+    --accent-foreground: 15 27% 14%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 25 25% 85%;
+    --input: 25 25% 85%;
+    --ring: 28 40% 64%;
+    --radius: 0.75rem;
+
+    /* Brand colors */
+    --ivory: #F8F3EE;
+    --beige: #EFE5DC;
+    --gold: #C9A27E;
+    --mocha: #5C4335;
+    --dark: #2D1F1A;
+    --rose: #D9B8A7;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#F8F3EE] text-[#2D1F1A];
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-dm {
+    font-family: 'DM Sans', sans-serif;
+  }
+  .text-gold {
+    color: #C9A27E;
+  }
+  .text-mocha {
+    color: #5C4335;
+  }
+  .text-dark {
+    color: #2D1F1A;
+  }
+  .text-rose {
+    color: #D9B8A7;
+  }
+  .bg-ivory {
+    background-color: #F8F3EE;
+  }
+  .bg-beige {
+    background-color: #EFE5DC;
+  }
+  .bg-gold {
+    background-color: #C9A27E;
+  }
+  .bg-mocha {
+    background-color: #5C4335;
+  }
+  .bg-dark {
+    background-color: #2D1F1A;
+  }
+  .bg-rose {
+    background-color: #D9B8A7;
+  }
+  .border-gold {
+    border-color: #C9A27E;
+  }
+  .border-mocha {
+    border-color: #5C4335;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F3EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A27E;
+  border-radius: 3px;
+}
+
+/* Before/After slider */
+.comparison-slider {
+  position: relative;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+
+/* Masonry grid */
+.masonry-grid {
+  columns: 1;
+  column-gap: 1rem;
+}
+@media (min-width: 640px) {
+  .masonry-grid { columns: 2; }
+}
+@media (min-width: 1024px) {
+  .masonry-grid { columns: 3; }
+}
+@media (min-width: 1280px) {
+  .masonry-grid { columns: 4; }
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+/* Line clamp */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
